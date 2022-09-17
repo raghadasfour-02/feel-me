@@ -48,13 +48,10 @@ pointLight2.intensity = 6
 // Create GUI Folder
 const light1 = gui.addFolder('Light 1')
 
-light1.add(pointLight2.position, 'x')
-light1.add(pointLight2.position, 'y')
-light1.add(pointLight2.position, 'z')
+light1.add(pointLight2.position, 'x').min(-3).max(3).step(0.01)
+light1.add(pointLight2.position, 'y').min(-6).max(6).step(0.01)
+light1.add(pointLight2.position, 'z').min(-3).max(3).step(0.01)
 light1.add(pointLight2, 'intensity')
-
-// const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1)
-// scene.add(pointLightHelper)
 
 // Blue Light
 const pointLight3 = new THREE.PointLight(0x0000FF, 2)
@@ -64,13 +61,10 @@ pointLight3.intensity = 10
 // Create GUI Folder
 const light2 = gui.addFolder('Light 2')
 
-light2.add(pointLight3.position, 'x')
-light2.add(pointLight3.position, 'y')
-light2.add(pointLight3.position, 'z')
+light2.add(pointLight3.position, 'x').min(-3).max(3).step(0.01)
+light2.add(pointLight3.position, 'y').min(-6).max(6).step(0.01)
+light2.add(pointLight3.position, 'z').min(-3).max(3).step(0.01)
 light2.add(pointLight3, 'intensity')
-
-// const pointLightHelperBlue = new THREE.PointLightHelper(pointLight3, 1)
-// scene.add(pointLightHelperBlue)
 
 scene.add(pointLight)
 scene.add(pointLight2)
@@ -141,6 +135,12 @@ function onDocumentMouseMove (event){
     mouseX = (event.clientX - windowX)
     mouseY = (event.clientY - windowY)
 }
+// Make sphere bigger on scroll
+const updateSphere = (event) => {
+    sphere.position.y = window.scrollY * .001
+}
+
+window.addEventListener('scroll', updateSphere);
 
 const clock = new THREE.Clock()
 
@@ -158,7 +158,7 @@ const tick = () =>
     // Animate movement on mouse hover
     sphere.rotation.x += .25 * (targetY - sphere.rotation.x)
     sphere.rotation.y += .5 * (targetX - sphere.rotation.y)
-    sphere.rotation.z += .5 * (targetY - sphere.rotation.z)
+    sphere.position.z += -.25 * (targetY - sphere.rotation.x)
 
     // Update Orbital Controls
     // controls.update()
