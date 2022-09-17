@@ -126,16 +126,39 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 /**
  * Animate
  */
+document.addEventListener('mousemove', onDocumentMouseMove)
+
+let mouseX = 0;
+let mouseY = 0;
+
+let targetX = 0;
+let targetY = 0;
+
+const windowX = window.innerWidth /2;
+const windowY = window.innerHeight / 2;
+
+function onDocumentMouseMove (event){
+    mouseX = (event.clientX - windowX)
+    mouseY = (event.clientY - windowY)
+}
 
 const clock = new THREE.Clock()
 
 const tick = () =>
 {
+    // Animate
+    targetX = mouseX * .001
+    targetY = mouseY * .001
 
     const elapsedTime = clock.getElapsedTime()
 
-    // Update objects
+    // Update objects -> Movement continious over time
     sphere.rotation.y = .5 * elapsedTime
+
+    // Animate movement on mouse hover
+    sphere.rotation.x += .25 * (targetY - sphere.rotation.x)
+    sphere.rotation.y += .5 * (targetX - sphere.rotation.y)
+    sphere.rotation.z += .5 * (targetY - sphere.rotation.z)
 
     // Update Orbital Controls
     // controls.update()
