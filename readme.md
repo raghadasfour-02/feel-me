@@ -1,17 +1,16 @@
-# Three.js Starter
-Courtesy of Bruno Simon of https://threejs-journey.xyz/
+# Feel Me
+Interactive 3D golf ball.
 
-## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+---
+### Inspiration
+As a gateway into the world of graphics-powered apps and websites, I decided to learn Three.js to create cool stuff.
 
-``` bash
-# Install dependencies (only the first time)
-npm install
+### What did I learn? [ABOUT PROGRAMMING]
+- What is WebGL and its' usages
+- Rendering on Demand
+- Debugging GLSL
+- Animating a 3D object on hover/scroll
+- The infinite possibilities yielded by manipulating the DOM 
 
-# Run the local server at localhost:8080
-npm run dev
-
-# Build for production in the dist/ directory
-npm run build
-```
+### What did I learn? [ABOUT WRITING SOFTWARE]
+- Use comments sparingly. Though I was tempted to use descriptive comments on code blocks, I often mislabeled concepts since Three.js is relatively new to me. A better route is to find ways to write simpler code that's easier to understand
