@@ -6,6 +6,7 @@ Interactive 3D golf ball.
 As a gateway into the world of graphics-powered apps and websites, I decided to learn Three.js to create cool stuff.
 
 ### What did I learn? [ABOUT PROGRAMMING]
+- Super cool stuff with Three.js 
 - What is WebGL and its' usages
 - Rendering on Demand
 - Debugging GLSL
