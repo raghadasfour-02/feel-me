@@ -1,5 +1,5 @@
 # Feel Me
-Interactive 3D golf ball. To view on your browswer, clone this repo and run 'npm run dev' in terminal.
+Interactive 3D golf ball. To view on your browser, clone this repo and run 'npm run dev' in terminal.
 
 ---
 ### Demo
