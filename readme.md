@@ -1,7 +1,9 @@
 # Feel Me
-Interactive 3D golf ball. [Visit Here](https://feel-me.tiiny.site/)
+Interactive 3D golf ball. To view on your browswer, clone this repo and run 'npm run dev' in terminal.
 
 ---
+### Demo
+
 ### Inspiration
 As a gateway into the world of graphics-powered apps and websites, I decided to learn Three.js to create cool stuff.
 
