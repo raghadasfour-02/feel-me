@@ -4,6 +4,8 @@ Interactive 3D golf ball. To view on your browswer, clone this repo and run 'npm
 ---
 ### Demo
 
+https://user-images.githubusercontent.com/70734779/220018716-f2bbee49-6ab3-41e1-a41b-d67a89de7a62.mov
+
 ### Inspiration
 As a gateway into the world of graphics-powered apps and websites, I decided to learn Three.js to create cool stuff.
 
